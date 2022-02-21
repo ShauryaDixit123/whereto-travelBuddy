@@ -1,0 +1,12 @@
+body {
+  background-color: black;
+}
+.searchquery {
+  min-width: 30vw;
+  font-size: 1.5rem !important;
+  color: bisque;
+  /* height: 20px !important; */
+}
+.icon {
+  size: 2rem !important;
+}

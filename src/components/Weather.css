@@ -1,0 +1,21 @@
+body {
+  color: white;
+}
+.weather-window {
+  font-size: large;
+  max-width: 30vw;
+  margin: 40px 50px;
+  /* background-color: darkslategrey; */
+  height: 50vh;
+  padding-left: 2em;
+}
+.othernames {
+  display: flex;
+  /* justify-content: space-between; */
+}
+.name-es {
+  margin-left: 10px;
+}
+.hidden {
+  display: none;
+}
