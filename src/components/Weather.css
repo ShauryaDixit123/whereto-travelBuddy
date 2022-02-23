@@ -19,3 +19,6 @@ body {
 .hidden {
   display: none;
 }
+.othernames {
+  margin-top: -10px !important;
+}

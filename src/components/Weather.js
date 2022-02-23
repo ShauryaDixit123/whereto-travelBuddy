@@ -42,7 +42,6 @@ function WeatherRender({ city }) {
   useEffect(() => {
     const resultId = setTimeout(() => {
       getCoords();
-      console.log("I rendered");
     }, 1000);
     return () => {
       clearTimeout(resultId);
@@ -62,12 +61,12 @@ function WeatherRender({ city }) {
   if (weatherData !== null) {
     document.querySelector(".weather-window")?.classList.remove("hidden");
   }
-  console.log(info);
   // data to be passed as props to different components.
   return (
     <div className="weather-window hidden">
       <h1>
         {info?.name}, {info?.country}
+        <i className={`large ${info?.country.toLowerCase()} flag`} />
       </h1>
       <div className="othernames ">
         (<span className="name-hin ">Hindi: {nameHin}</span>
