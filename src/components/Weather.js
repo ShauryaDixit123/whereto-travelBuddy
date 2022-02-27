@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Weather.css";
+import { MapContainer } from "./RenderMap";
 import DisplayWeather from "./DisplayWeather";
+import NewsCountry from "./NewsCountry";
 
-function WeatherRender({ city }) {
+function WeatherRender({ city, setLatieandLong }) {
   // states are defined below, used for fetching data from the city entered!
   // first is to get co-ordinates of the city ie. latitude and longitude ;
   // second is to fetch the data for the weather of that city as its params require lati and longi of that place!
@@ -57,11 +59,13 @@ function WeatherRender({ city }) {
 
   useEffect(() => {
     getWeather();
+    setLatieandLong(lat, lon);
   }, [lat, lon]);
   if (weatherData !== null) {
     document.querySelector(".weather-window")?.classList.remove("hidden");
   }
   // data to be passed as props to different components.
+
   return (
     <div className="weather-window hidden">
       <h1>
@@ -73,6 +77,7 @@ function WeatherRender({ city }) {
         <span className="name-es ">Local Name: {info?.local_names?.es}</span>)
       </div>
       <DisplayWeather data={weatherData} />
+      <NewsCountry city={info?.name} country={info?.country} />
     </div>
   );
 }

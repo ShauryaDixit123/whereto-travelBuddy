@@ -10,3 +10,15 @@ body {
 .icon {
   size: 2rem !important;
 }
+.mapWeather {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+.map {
+  margin-top: 40px;
+  border-radius: 20px;
+}
+.weather_info {
+  margin-top: 10px;
+}

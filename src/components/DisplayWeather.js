@@ -13,7 +13,6 @@ function DisplayWeather({ data }) {
   const hourlyData = data.hourly;
   const lat = data.lat;
   const lon = data.lon;
-  console.log(data);
   return (
     <div className="large icon">
       <div className="temp-div">
@@ -32,9 +31,7 @@ function DisplayWeather({ data }) {
         <h3>Hourly ForCast for 48hours:</h3>
         <WeatherChart hourlyData={hourlyData} />
       </div>
-      <div className="predictions">
-        <PredictTemp lat={lat} lon={lon} />
-      </div>
+      <div className="predictions"></div>
     </div>
   );
 }

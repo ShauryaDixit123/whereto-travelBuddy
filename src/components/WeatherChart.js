@@ -32,13 +32,22 @@ function WeatherChart({ hourlyData }) {
   });
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
+    animations: {
+      tension: {
+        duration: 1000,
+        easing: "linear",
+        from: 1,
+        to: 0,
+        loop: true,
+      },
+    },
     plugins: {
       legend: {
         position: "top",
       },
       title: {
         display: true,
-        text: "Chart.js Line Chart",
       },
     },
   };
@@ -57,7 +66,7 @@ function WeatherChart({ hourlyData }) {
   console.log(tempFull);
 
   return (
-    <div>
+    <div style={{ height: "400px", width: "400px" }}>
       <Line options={options} data={data} />
     </div>
   );

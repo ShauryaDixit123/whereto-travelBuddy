@@ -27,7 +27,7 @@ function PredictTemp({ lat, lon }) {
       return datum.getTime() / 1000;
     }
   }
-
+  // .format(date.now())
   console.log("Today", Date.now());
   const getData = async () => {
     const { data } = await axios.get(`${apiUrl}`, {

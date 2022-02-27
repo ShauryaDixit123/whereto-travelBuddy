@@ -1,0 +1,16 @@
+.notepad_textarea {
+  height: 450px;
+  width: 550px;
+  font-size: 30px;
+  margin-top: 15px;
+}
+.notepad_textarea {
+  color: white;
+  background-color: #222823;
+  border: none;
+}
+.notepad_textarea :active {
+  border: none;
+}
+/* 395B50 */
+/* a7a2a9 */
